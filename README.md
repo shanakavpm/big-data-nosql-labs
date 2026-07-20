@@ -24,11 +24,19 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
-Set the Atlas connection string for the current PowerShell session:
+Create a private `.env` file from the provided template:
 
 ```powershell
-$env:MONGODB_URI = 'mongodb+srv://USERNAME:PASSWORD@CLUSTER.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+Copy-Item .env.example .env
 ```
+
+Open `.env` and replace the placeholder value with the Atlas connection string:
+
+```env
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@CLUSTER.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+```
+
+The notebook loads this file with `python-dotenv`. The real `.env` is excluded by `.gitignore` and must never be committed.
 
 Start Jupyter:
 
@@ -63,4 +71,3 @@ Crop all screenshots so they do not expose credentials, connection strings, or s
 ## Security
 
 `.env`, private keys, virtual environments, Jupyter checkpoints, caches, and editor files are excluded through `.gitignore`. `.env.example` contains placeholders only.
-
