@@ -1,18 +1,16 @@
-# Big Data NoSQL Labs
+# MongoDB Atlas NoSQL Lab
 
-Practical NoSQL database exercises using MongoDB Atlas, Python, pandas, PyMongo, Cassandra, Neo4j, and Docker.
+Task 2 implementation using MongoDB Atlas, Python, pandas and PyMongo.
 
 ## MongoDB Task 2
 
-The assignment-ready implementation is in `MongoDB_Task2.ipynb`. It demonstrates:
+The assignment-ready implementation is in `MongoDB.ipynb`. It demonstrates:
 
 - a secure Python connection to MongoDB Atlas;
 - CSV migration from `pokemon_data.csv` with pandas and PyMongo;
 - repeatable imports using a unique index and bulk upserts;
 - flexible-schema documents containing missing, extra, array, Boolean, and nested fields;
 - find, filter, projection, update, delete, count, and verification operations.
-
-The original exploratory notebook is retained as `MongoDB.ipynb`.
 
 ## Setup
 
@@ -41,7 +39,7 @@ The notebook loads this file with `python-dotenv`. The real `.env` is excluded b
 Start Jupyter:
 
 ```powershell
-python -m notebook MongoDB_Task2.ipynb
+python -m notebook MongoDB.ipynb
 ```
 
 Run the notebook from top to bottom. The import uses `pokedex_number` as a unique identifier, so rerunning it updates existing Pokémon instead of inserting duplicates.
